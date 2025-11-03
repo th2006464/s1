@@ -1,206 +1,142 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   
   <head>
     <meta charset="UTF-8">
-    <title>金光集团IT支持页面</title>
-    <!-- Bootstrap 的 CSS 文件 -->
-    <!-- Bootstrap 的 CSS 文件 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelONE下载</title>
+    <!-- 引用Bootstrap样式 -->
     <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <style>/* 毛玻璃效果样式 */ #blurOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; z-index: 1000; } /* 弹窗样式 */ #authModal { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3); max-width: 400px; text-align: center; } /* 主要内容样式 */ #content { display: none; padding: 20px; }</style></head>
+    <style>/* 自定义样式 */ body { padding-top: 10px; /* 为内容留出顶部间距 */ } .panel-custom { max-width: 800px; /* 设置面板的最大宽度 */ margin: 0 auto; /* 居中显示 */ text-align: center; } .panel-title { font-size: 24px; color: #337ab7; /* 设置标题颜色 */ } .btn-download { margin-bottom: 10px; /* 按钮与下方内容的间距 */ } .key-section { word-wrap: break-word; /* 强制长文本换行 */ overflow-wrap: break-word; /* 兼容性更好的换行属性 */ white-space: normal; /* 确保文本正常换行 */ } .key-section code { font-size: 16px; /* 调整密钥字体大小 */ background-color: #f5f5f5; /* 添加背景色 */ padding: 10px; border-radius: 4px; /* 圆角效果 */ display: inline-block; /* 避免超出容器 */ max-width: 100%; /* 确保密钥内容不会超出容器 */ } /* 注意提醒样式优化 */ .alert-warning-custom { background-color: #fff3cd; /* 浅黄色背景 */ border: 1px solid #ffeeba; /* 边框颜色 */ color: #856404; /* 文字颜色 */ padding: 15px; border-radius: 4px; font-size: 18px; font-weight: bold; margin-bottom: 20px; text-align: center; } .alert-warning-custom i { margin-right: 10px; /* 图标与文字间距 */ } /* 高亮文字样式 */ .highlight-text { color: #d9534f; /* 红色文字 */ font-size: 20px; /* 稍大字体 */ font-weight: bold; /* 加粗 */ background-color: #ffffcc; /* 浅黄色背景 */ padding: 5px 10px; /* 内边距 */ border-radius: 4px; /* 圆角效果 */ animation: blink 2s infinite; /* 动画效果 */ } /* 动画效果：闪烁 */ @keyframes blink { 0%, 100% { opacity: 1; /* 完全可见 */ } 50% { opacity: 0.5; /* 半透明 */ } } /* 底部支持面板样式 */ .support-panel { margin-top: 10px; /* 与上方内容保持间距 */ padding: 20px; background-color: #f7f7f7; /* 浅灰色背景 */ border: 1px solid #ddd; /* 边框 */ border-radius: 4px; /* 圆角效果 */ text-align: left; /* 左对齐 */ font-size: 16px; /* 字体大小 */ line-height: 1.6; /* 行高 */ } .support-panel strong { color: #337ab7; /* 链接颜色 */ } .support-panel a { color: #337ab7; /* 邮件链接颜色 */ text-decoration: none; /* 去掉下划线 */ } .support-panel a:hover { text-decoration: underline; /* 鼠标悬停时显示下划线 */ }</style></head>
   
   <body>
-    <!-- 模糊遮罩层 -->
-    <div id="blurOverlay">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">IT人员验证</h4></div>
-          <div class="modal-body">
-            <p>此页面仅限IT人员访问,密码请咨询总部IT</p>
-            <input type="password" id="passwordInput" class="form-control" placeholder="请输入访问密码" autocomplete="off">
-            <p id="errorMessage" class="text-danger" style="display: none;">密码错误，请重试！</p></div>
-          <div class="modal-footer">
-            <a href="https://www.garchina.com" target="_blank" class="btn btn-primary pull-left">访问网址大全</a>
-            <button type="button" class="btn btn-success" onclick="verifyAccess()">确认访问</button></div>
-        </div>
-      </div>
-    </div>
     <div class="container">
-      <div class="row clearfix">
-        <div class="col-md-12 column">
-          <div class="row clearfix">
-            <p>&nbsp;</p>
-            <div class="col-md-12 column">
-              <div class="alert alert-dismissable alert-success text-center">
-                <h1>
-                  <strong>金光集团IT支持页面</strong></h1>
-                <br>
-                <h3>
-                  <strong>
-                    <span style="color:red;font-weight:bold;">Ctrl+D收藏此网页</span>，此网页仅限IT人员使用(
-                    <span style="color:red;font-weight:bold;">禁止向用户发送!)</span></strong>
-                </h3>
-                <h3>
-                  <strong>用户请联系: CN IT Support &lt;CN_IT_Support@sinarmas-agri.com&gt;</strong></h3>
-              </div>
-            </div>
-          </div>
-          <div class="row clearfix">
-            <div class="col-md-12 column">
-              <div class="row clearfix">
-                <div class="col-md-6 column">
-                  <div class="row clearfix">
-                    <div class="col-md-6 column">
-                      <div class="panel panel-info">
-                        <div class="panel-heading">
-                          <h3 class="panel-title"><span style="color:red;font-weight:bold;">[A]</span>网页支持
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                          <div>
-                            <a href="https://nextchat.foxtang.com/" class="btn btn-info btn-sm btn-block ">Deepseek团队版</a></div>
-                          <p>
-                            <div>
-                              <a href="https://oa.garchina.com/service/datapatch/index" class="btn btn-info btn-sm btn-block">OA节点手动调整(Data Patch)</a></div>
-                            <p>
-                              <div>
-                                <a href="https://oa.garchina.com:8768/Home" class="btn btn-info btn-sm btn-block">OA UPM用户管理</a></div>
-                              <p>
-                                <div>
-                                  <a href="https://keyboard-test.space/cn/" class="btn btn-info btn-sm btn-block">在线键盘测试</a></div>
-                                <p>
-                                  <div>
-                                    <a href="https://jingyan.baidu.com/article/22fe7ced3e530d3002617f0a.html" class="btn btn-info btn-sm btn-block">账户登录提示临时配置文件</a></div>
-                                </p>
-								<div><a href="https://www.garchina.com/newuser.html" class="btn btn-info btn-sm btn-block">员工入职信息模板</a></div>
-								
-                                </div>
-                        <div class="panel-footer"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 column">
-                      <div class="panel panel-info">
-                        <div class="panel-heading">
-                          <h3 class="panel-title"><span style="color:red;font-weight:bold;">[B]</span>工具软件
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                          
-                            <div>
-                              <a href="https://anydesk.com/zhs/downloads/windows" class="btn btn-info btn-sm btn-block">远程协助软件下载[Anydesk]</a></div>
-                            <p>
-                              <div>
-                                <a href="https://wwzx.lanzouy.com/iVLIy2wasg8h" class="btn btn-info btn-sm btn-block">启用PIN登陆</a></div>
-                              <p>
-                                <div>
-                                  <a href="https://wwzx.lanzn.com/ibcD22rnagfe" class="btn btn-warning btn-sm btn-block">SentinelCleaner</a></div>
-                                <p>
-                                  <div><a href="https://wwzx.lanzn.com/inrAp2osyz1a" class="btn btn-info btn-sm btn-block">PuTTY客户端</a></div>
-                                  <p>
-								  <div><a href="https://wwzx.lanzn.com/iMnSU2osy48b" class="btn btn-info btn-sm btn-block">Geek卸载软件</a></div><p>
-                                    <div>
-                                      <a href="https://wwzx.lanzn.com/iid982ovbkuj" class="btn btn-info btn-sm btn-block">WinSCP</a></div>
-                        </div>
-                        <div class="panel-footer"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 column">
-                  <div class="row clearfix">
-                    <div class="col-md-6 column">
-                      <div class="panel panel-info">
-                        <div class="panel-heading">
-                          <h3 class="panel-title"><span style="color:red;font-weight:bold;">[C]</span>魔法软件
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                          <div>
-                            <a href="https://wwzx.lanzn.com/iZVj32oszgub" class="btn btn-info btn-sm btn-block">AACT[测试]</a></div>
-                          <p>
-                            <div>
-                              <a href="https://aichunjing.lanzoui.com/b710887" class="btn btn-info btn-sm btn-block">HEU[测试]</a></div>
-                            <p>
-                              <div>
-                                <a href="https://www.garchina.com/mas.html" class="btn btn-success btn-sm btn-block">MAS[推荐]</a></div>
-                              <p>
-                                <div>
-                                  <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases" class="btn btn-info btn-sm btn-block">Clash Verge</a></div>
-                                <p>
-                                  <div>
-                                    <a href="https://github.com/huiyadanli/RevokeMsgPatcher" class="btn btn-info btn-sm btn-block">WX多开防撤回</a></div>
-                                  <p>
-                                    <div>
-                                      <a href="https://wwzx.lanzn.com/iIkDG2oszdle" class="btn btn-info btn-sm btn-block">IDM下载器</a></div>
-                        </div>
-                        <div class="panel-footer"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 column">
-                      <div class="panel panel-info">
-                        <div class="panel-heading">
-                          <h3 class="panel-title"><span style="color:red;font-weight:bold;">[D]</span>装机维护
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                          <a href="https://zhimei58.lanzoup.com/iVgMI0yrz4de" class="btn btn-info btn-sm btn-block">大文件检测清理</a></p>
-                          <p>
-                            <a href="\\10.95.0.88\Public\Software\SAP" class="btn btn-info btn-sm btn-block">SAP软件(公司共享盘)</a></p>
-                          <p>
-                            <a href="https://wwm.lanzn.com/iu4cE24hl41a" class="btn btn-info btn-sm btn-block">SAP本地打印支持</a>
-                            <p>
-                              <a href="https://www.lanzouo.com/iLCvb2o882bg" class="btn btn-info btn-sm btn-block">WinRAR</a></p>
-                            <p>
-                              <a href="https://otp.landian.vip/zh-cn/download.html" class="btn btn-info btn-sm  btn-block">Office Tool Plus</a></p>
-                            <a href="https://www.garchina.com/software/it配置.zip" class="btn btn-info btn-sm  btn-block">IT配置</a></div>
-                        <div class="panel-footer"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row clearfix">
-            <div class="col-md-12 column">
-              <div class="alert alert-dismissable alert-warning">
-                <h4>注意!</h4>如有任何问题,请发邮件到中国区IT团队
-                <strong>(尽可能提供问题截图</strong>)
-                <br>CN IT Support &lt;CN_IT_Support@sinarmas-agri.com&gt;</div></div>
-          </div>
+      <!-- 面板窗体 -->
+      <div class="panel panel-default panel-custom">
+        <div class="panel-heading">
+          <h3 class="panel-title">SentinelONE下载</h3></div>
+        <div class="panel-body">
+          <!-- 注意提醒部分 -->
+          <div class="alert-warning-custom">
+            <i class="glyphicon glyphicon-exclamation-sign"></i>
+            <!-- Bootstrap图标 -->
+            <span class="highlight-text">安装前必须卸载360安全软件或其他安全软件！</span></div>
+          <!-- 下载按钮部分 -->
+          <div style="font-size: 0;"> <!-- 可选：避免 inline-block 的间隙问题 -->
+  <div class="download-section" style="display: inline-block; margin-right: 10px;">
+    <a href="https://wwzx.lanzouu.com/i4djX2vh85dc" class="btn btn-success  btn btn-download" target="_blank">①安装程序下载</a>
+  </div>
+
+  <div class="download-section" style="display: inline-block;">
+    <a href="https://wwzx.lanzouu.com/ic3NG2vh86je" class="btn btn-info btn btn-download" target="_blank">②备用下载链接</a>
+  </div>
+</div>
+         
+		  <!-- 安装说明部分 -->
+<style>
+    .instructions-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+    }
+    .instructions-table th,
+    .instructions-table td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    .instructions-table thead th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<!-- 安装密钥部分 -->
+<div class="key-section">
+    <table class="key-table" style="width: 100%; border-collapse: collapse; table-layout: fixed; border: 1px solid #ccc;">
+        <thead>
+            <tr>
+                <th style="text-align: center; padding: 8px; background-color: #f2f2f2; font-size: 1.2em;">安装Token密钥(序列号SN)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 8px; word-wrap: break-word; overflow-wrap: break-word; text-align: center; border: 1px solid #ccc;">
+                    <code>eyJ1cmwiOiAiaHR0cHM6Ly9hcHNlMS0yMDAxLnNlbnRpbmVsb25lLm5ldCIsICJzaXRlX2tleSI6ICIyODk2N2ZiYTExNTYwZDg5In0=</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="instructions-section">
+    <table class="instructions-table">
+        <thead>
+            <tr>
+                <th colspan="2" style="text-align: center; font-size: 1.2em;">安装说明</th>
+            </tr>
+            <tr>
+                <th>步骤</th>
+                <th>操作说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>必须先卸载 360、金山毒霸等安全软件才能安装(如果系统提示有风险,点允许/同意)。</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>点击安装包，输入 token 后点击下一步进行安装。</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <span style="background-color: #ffff00; font-weight: bold; color: #333;">
+                        如果安装报错(卸载安全软件后)，请运行下方的修复，等待修复程序自动结束后再尝试安装即可。
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    如安装遇到问题,请截图反馈至CNIT,如需远程协助请下载下方向日葵并告知IT同事
+                    <span style="background-color: #ffff00; font-weight: bold; color: #333;">
+                        向日葵识别ID和密码。
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+	
+	<!-- 下载按钮部分 -->
+          <div style="font-size: 0;"> <!-- 可选：避免 inline-block 的间隙问题 -->
+  <div class="download-section" style="display: inline-block; margin-right: 10px;">
+    <a href="https://www.garchina.com/SunloginClientSOS_1.1.0_x64.exe" class="btn btn-primary btn btn-download" target="_blank">向日葵远程协助下载</a>
+  </div>
+
+  <div class="download-section" style="display: inline-block;">
+    <a href="https://wwzx.lanzouu.com/iWwaN32y8p6j" class="btn btn-info btn btn-download" target="_blank">安装报错修复程序</a>
+  </div>
+  
+  
+</div>
+	
+</div>
         </div>
       </div>
+      <!-- 支持面板 -->
+      <div class="panel panel-default support-panel panel-custom">
+        <p>如遇到安装问题，请发邮件至中国区IT团队(尽可能提供问题截图)：
+          <br>
+            <strong>CN IT Support &lt;CN_IT_Support@sinarmas-agri.com&gt; </strong></p>
+      </div>
     </div>
-    <script>
-	document.getElementById('passwordInput').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.keyCode === 13) { // 检测回车键
-        verifyAccess(); // 调用验证函数
-    }
-});
-
-	function verifyAccess() {
-        const password = document.getElementById('passwordInput').value;
-        const errorMessage = document.getElementById('errorMessage');
-
-        if (password === '112233') {
-          document.getElementById('blurOverlay').style.display = 'none';
-          document.getElementById('content').style.display = 'block';
-        } else {
-          errorMessage.style.display = 'block';
-          document.getElementById('passwordInput').value = '';
-        }
-      }
-
-      // 禁止右键菜单（基础防护）
-      document.addEventListener('contextmenu',
-      function(e) {
-        e.preventDefault();
-      });</script>
+    <!-- 引入Bootstrap的JavaScript依赖（可选） -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 
 </html>
